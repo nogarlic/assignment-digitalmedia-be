@@ -55,7 +55,7 @@ npm run dev
 
 ## Langkah 4: Konfigurasi
 
-### Database di .env
+### Konfigurasi database cloud di .env atau menggunakan konfigurasi database lokal setelah mengimport file 'libby.sql'
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=34.70.177.177
