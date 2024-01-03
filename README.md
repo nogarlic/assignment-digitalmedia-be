@@ -85,7 +85,9 @@ mv public/storage public/storage_old
 
 php artisan storage:link
 
-mv public/storage_old public/storage
+mv public/storage_old/book-cover-images/* public/storage/book-cover-images/
+
+mv public/storage_old/pdf-files/* public/storage/pdf-files/
 ```
 
 ### Jalankan Migrasi Database
