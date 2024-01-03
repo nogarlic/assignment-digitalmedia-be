@@ -36,6 +36,15 @@ git clone https://github.com/nogarlic/assignment-digitalmedia-be.git
 
 ## Langkah 2: Instalasi Dependencies
 
+```bash
+sudo apt-get update
+sudo apt-get install php-gd
+```
+
+```bash
+sudo apt-get install php-curl
+```
+
 ### Composer Install
 ```bash
 composer install
@@ -55,7 +64,7 @@ npm run dev
 
 ## Langkah 4: Konfigurasi
 
-### Konfigurasi database di .env atau menggunakan konfigurasi database lokal setelah mengimport file 'libby.sql'
+### Konfigurasi database cloud di .env atau menggunakan konfigurasi database lokal setelah mengimport file 'libby.sql'
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=34.70.177.177
@@ -72,7 +81,11 @@ php artisan key:generate
 
 ### Buat Storage Link
 ```bash
+mv public/storage public/storage_old
+
 php artisan storage:link
+
+mv public/storage_old public/storage
 ```
 
 ### Jalankan Migrasi Database
@@ -85,4 +98,3 @@ php artisan migrate
 ```bash
 php artisan serve
 ```
-
